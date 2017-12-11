@@ -2,17 +2,26 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-header {
+  /* */
+  background-color: rgb(150, 180, 50);
+  height: 120px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 80px;
+  margin-right: 25px;
+  }
 
 .App-title {
   font-size: 1.5em;
@@ -22,7 +31,54 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+} */
+
+table {
+  border: 1px solid rgb(200, 200, 200);
+  width: 90%;
+  text-align: center;
+  /* border-collapse: collapse; */
+  padding: 3px;
+  background: rgb(235, 235, 235);
+  margin: auto;
+}
+
+tr {
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+td {
+  border-left: 1px solid rgb(200, 200, 200);
+  padding: 1px 10px 1px 5px;
+}
+main div {
+  width: 90%;
+  margin:auto;
+  flex: 1;
+}
+main {
+  display: flex;
+}
+aside {
+  margin: auto;
+  width: 200px;
+}
+
+button {
+  background: #96b432;
+  background-image: -webkit-linear-gradient(top, #96b432, #509432);
+  background-image: -moz-linear-gradient(top, #96b432, #509432);
+  background-image: -ms-linear-gradient(top, #96b432, #509432);
+  background-image: -o-linear-gradient(top, #96b432, #509432);
+  background-image: linear-gradient(to bottom, #96b432, #509432);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
 }
