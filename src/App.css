@@ -47,14 +47,18 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid rgb(200, 200, 200);
+  /* border-bottom: 1px solid rgb(200, 200, 200); */
+  /* margin-top: 10px; */
 }
 td {
-  border-left: 1px solid rgb(200, 200, 200);
+  border-top: 1px solid rgb(200, 200, 200);
+  /* margin-top: 10px; */
   padding: 1px 10px 1px 5px;
+  text-align: left;
 }
 main div {
   width: 90%;
+  /* min-width: 500px; */
   margin:auto;
   flex: 1;
 }
@@ -81,4 +85,13 @@ button {
   font-size: 14px;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
+}
+
+#filterB {
+  font-size: 10px;
+  padding: 5px;
+}
+
+input {
+  border-radius: 2px;
 }

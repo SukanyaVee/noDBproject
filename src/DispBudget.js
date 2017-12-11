@@ -2,14 +2,7 @@ import React from 'react';
 
 function DispBudget (props){
     return(
-        <div>
-            {/* <table> */}
-                {/* <tr>
-                    <th>Date</th>
-                    <th>Category</th> 
-                    <th>Place</th>
-                    <th>Amount</th>
-                </tr> */}
+        // <div>
                 <tr>
                     <td>{props.transaction.id}</td>
                     <td>{props.transaction.month}</td>
@@ -19,10 +12,7 @@ function DispBudget (props){
                     <td>{props.transaction.place}</td>
                     <td>{props.transaction.amount}</td>
                 </tr>   
-                <tr>
-                </tr>                   
-            {/* </table> */}
-        </div>
+        // </div>
     )
 }
 

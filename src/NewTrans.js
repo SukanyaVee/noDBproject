@@ -25,11 +25,12 @@ class NewTrans extends Component {
              <br/>
                 {/* <input onChange={event=> {this.setState({idval: event.target.value})}}/> */}
                 {/* <input onChange={event=> {this.setState({dateval: new Date()})}}/> */}
-                <input placeholder=" Category" onChange={event=> {this.setState({catval: event.target.value})}}/>
-                <input placeholder=" Place" onChange={event=> {this.setState({placeval: event.target.value})}}/>
-                <input placeholder=" Amount" onChange={event=> {this.setState({amtval: parseFloat(event.target.value,10)})}}/>
+                <input  ref="emptyT" placeholder=" Category" onChange={event=> {this.setState({catval: event.target.value})}}/>
+                <input  ref="emptyT" placeholder=" Place" onChange={event=> {this.setState({placeval: event.target.value})}}/>
+                <input  ref="emptyT" placeholder=" Amount" onChange={event=> {this.setState({amtval: parseFloat(event.target.value,10)})}}/>
                 <button onClick={event=>{
-                    this.props.newtrans(this.state.catval,this.state.placeval,this.state.amtval)
+                    this.props.newtrans(this.state.catval,this.state.placeval,this.state.amtval);
+                    this.refs.emptyT.value = '';
                     // this.setState({catval: '', placeval: '', amtval: 0})
                 }
                     }>Add Transaction</button>

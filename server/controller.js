@@ -7,7 +7,8 @@ var transactions=[{id: 102, date: 21, month: "Jan", year: 2017, category: "food"
     {id: 203, date: 20, month: "Oct", year: 2017, category: "transport", place: "chevron", amount: 120.05}
     ]
 var idTracker = 0;
-// var expenses=filter.forEach()
+var expenses = 0;
+
 
 
 module.exports = {
@@ -27,14 +28,15 @@ module.exports = {
     },
     
     get: (req,res)=> {
+        transactions.forEach(elem=>expenses+=elem.amount)
         if (req.query.month)
         {
             let subTransactions = transactions.filter(tran=>tran.month==req.query.month)
-            res.status(200).send(subTransactions)
+            res.status(200).send({transactions: subTransactions})
         }
         else
         {
-            res.status(200).send(transactions)
+            res.status(200).send({transactions: transactions, expenses: expenses})
         }
     },
 

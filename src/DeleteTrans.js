@@ -23,7 +23,7 @@ class DeleteTrans extends Component {
         return(
             <div>
                 <br/>
-                <input placeholder=" Transaction ID" onChange={event=> {this.setState({idval: parseFloat(event.target.value,10)})}}/>
+                <input  ref="emptyT" placeholder=" Transaction ID" onChange={event=> {this.setState({idval: parseFloat(event.target.value,10)})}}/>
                 {/* <input onChange={event=> {this.setState({dateval: new Date()})}}/> */}
                 {/* <input onChange={event=> {this.setState({catval: event.target.value})}}/> */}
                 {/* <input onChange={event=> {this.setState({placeval: event.target.value})}}/> */}
@@ -31,6 +31,7 @@ class DeleteTrans extends Component {
                 <button onClick={event=>{
                     this.props.deletetrans(this.state.idval)
                     this.setState({idval: 0})
+                    this.refs.emptyT.value = '';
                 }
                     }>Delete Transaction</button>
 
